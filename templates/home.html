@@ -2,7 +2,7 @@
 
 {% block content %}
     {% for post in object_list %}
-        <h2><a href="{% url 'post-detail' post.id %}">{{post.title}}</a></h2>
+        <h2><a href="{% url 'post_detail' post.pk %}">{{post.title}}</a></h2>
         <p><b>{{post.author}}</b></p>
         <p>{{post.body|truncatewords:2}}</p>
         <hr/>

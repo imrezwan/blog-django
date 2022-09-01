@@ -4,5 +4,7 @@
     <div class="post-entry">
         <h2>{{ blogpost.title }}</h2>
         <p>{{ blogpost.body }}</p>
+        <a href="{% url 'post_edit' blogpost.id %}"> Edit Post</a>
+        <a href="{% url 'post_delete' blogpost.id %}"> Delete Post</a>
     </div>
 {% endblock %}
