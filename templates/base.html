@@ -1,8 +1,18 @@
-<header>
-    <a href="{% url 'home' %}">Home</a>
-    <a href="{% url 'aboutus' %}">About Us</a>
-</header>
+{% load static %}
+<html>
+    <head>
+        <title>Django CRUD</title>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    </head>
+    <body>
+        <header>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'aboutus' %}">About Us</a>
+        </header>
+        
+        {% block content %}
+        Base Block
+        {% endblock %}
 
-{% block content %}
-Base Block
-{% endblock %}
+    </body>
+</html>
